@@ -12,6 +12,3 @@ phases:
     commands:
       - echo Build started...
       - ng build --prod
-artifacts:
-  files:
-    - dist/**/*
