@@ -1,0 +1,34 @@
+.op{
+    color: #fff;
+}
+.book{
+    background:green;
+}
+.cancel{
+    background: red;
+}
+.title{
+    font-weight: bold;
+}
+.container{
+    border-color: black;
+    border: 1;
+    border-style: solid;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+.bookContainer{
+    background-color: #ccffb3;
+}
+.cancelContainer{
+    background-color: #ffad99;
+}
+.cancelBtnHdn{
+    display: none;
+}
+.myCardStyle{
+    margin-bottom: 0.4rem;
+}
+.hiddenCard{
+    display: none;
+}

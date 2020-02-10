@@ -1,0 +1,25 @@
+<mat-card class="myCardStyle" [ngClass]="setCardClass()">
+    <mat-card-title>
+        <div class="col-2">
+            <span [ngClass]="setOpClass()">{{opLog1.operation}}</span>
+        </div>
+    </mat-card-title>
+    <mat-card-content>
+        <div class="col-2">
+            <p>
+                <span class="title">Doctor Name :</span> {{opLog1.doctorName}}   
+            </p>
+            <p>
+                <span class="title">Patient Name :</span> {{opLog1.patientName}}   
+            </p>
+        </div>
+        <div class="col-3">
+            <span class="title">From: </span>{{opLog1.fromDate | date:'dd/MM/yyyy HH:mm'}} 
+            <span class="title">To: </span>{{opLog1.toDate.toLocaleString() | date:'dd/MM/yyyy HH:mm'}}
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-flat-button color="warn" (click)="onClickCancelAppointmentBtn(this)" [ngClass]="setButtonClass()">Cancel</button>
+    </mat-card-actions>
+</mat-card>
+

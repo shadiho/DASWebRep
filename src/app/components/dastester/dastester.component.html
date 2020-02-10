@@ -1,0 +1,69 @@
+
+<div>
+
+    <h1>
+        Add New Appointment
+    </h1>
+    
+    <p>
+        <mat-form-field>
+            <mat-label>Doctor Name</mat-label>
+            <mat-select [(value)]="selectedDocotrID">
+                <mat-option *ngFor="let doc of Doctors" [value] = "doc.doctorId">{{doc.doctorName}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <mat-label>Patient Name</mat-label>
+            <mat-select [(value)]="selectedPatientID">
+                <mat-option *ngFor="let pat of Patients" [value] = "pat.patientId">{{pat.patientName}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <input matInput [matDatepicker]="mydatepicker" [min]="minDate" [max]="maxDate" 
+            (dateInput)="changeDateEvent('input', $event)">
+            <mat-datepicker-toggle [for]="mydatepicker" matSuffix></mat-datepicker-toggle>
+            <mat-datepicker #mydatepicker ></mat-datepicker>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <mat-label>From Hour</mat-label>
+            <mat-select [(value)]="selectedHour">
+                <mat-option *ngFor="let hh of hours" [value] = "hh">{{hh}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Minute</mat-label>
+            <mat-select [(value)]="selectedminute">
+                <mat-option *ngFor="let mm of minutes" [value] = "mm">{{mm}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <mat-label>To Hour</mat-label>
+            <mat-select [(value)]="selectedToHour">
+                <mat-option *ngFor="let hh of hours" [value] = "hh">{{hh}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Minute</mat-label>
+            <mat-select [(value)]="selectedToMinute">
+                <mat-option *ngFor="let mm of minutes" [value] = "mm">{{mm}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </p>
+    
+    <p>
+        <button (click)="onClickAddAppointmentBtn()" color="warn" mat-raised-button>Add Appointment</button>
+    </p>
+    <h1>Reset Database</h1>
+    <p>
+        <button (click)="onClickResetBtn()" color="warn" mat-raised-button>Reset Database</button>
+    </p>
+</div>
+

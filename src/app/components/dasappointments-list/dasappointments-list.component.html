@@ -1,0 +1,28 @@
+<h1>Appointments List</h1>
+<p>
+    <mat-form-field>
+        <mat-label>Doctor Name</mat-label>
+        <mat-select [(value)]="selectedDocotrID">
+            <mat-option></mat-option>
+            <mat-option *ngFor="let doc of Doctors" [value] = "doc.doctorId">{{doc.doctorName}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field>
+        <mat-label>Patient Name</mat-label>
+        <mat-select [(value)]="selectedPatientID" >
+            <mat-option></mat-option>
+            <mat-option *ngFor="let pat of Patients" [value] = "pat.patientId">{{pat.patientName}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</p>
+<p>
+    <button (click)="onClickSearchAppointmentBtn()" color="warn" mat-raised-button>Search</button>
+</p>
+<p>&nbsp;</p>
+<p>
+    <app-dasappointment-op-log-item *ngFor="let opLog1 of appointmentsOpLogs" [opLog1]="opLog1">
+
+    </app-dasappointment-op-log-item>
+</p>

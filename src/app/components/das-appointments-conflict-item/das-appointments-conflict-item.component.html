@@ -1,0 +1,50 @@
+<table>
+    <tr>
+        <td>
+            <mat-card class="myCardStyle">
+                <mat-card-title>
+                    <div class="col-2">
+                        <span>Created On {{appointmentsConflictModel.appointment1CreationDateTime | date:'dd/MM/yyyy HH:mm'}}</span>
+                    </div>
+                </mat-card-title>
+                <mat-card-content>
+                    <div class="col-2">
+                        <p>
+                            <span class="title">Doctor Name :</span> {{appointmentsConflictModel.appointment1DoctorName}}   
+                        </p>
+                        <p>
+                            <span class="title">Patient Name :</span> {{appointmentsConflictModel.appointment1PatientName}}   
+                        </p>
+                    </div>
+                    <div class="col-3">
+                        <span class="title">From: </span>{{appointmentsConflictModel.appointment1FromDate | date:'dd/MM/yyyy HH:mm'}} 
+                        <span class="title">To: </span>{{appointmentsConflictModel.appointment1ToDate | date:'dd/MM/yyyy HH:mm'}}
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </td>
+        <td>
+            <mat-card class="myCardStyle">
+                <mat-card-title>
+                    <div class="col-2">
+                        <span>Created On {{appointmentsConflictModel.appointment2CreationDateTime | date:'dd/MM/yyyy HH:mm'}}</span>
+                    </div>
+                </mat-card-title>
+                <mat-card-content>
+                    <div class="col-2">
+                        <p>
+                            <span class="title">Doctor Name :</span> {{appointmentsConflictModel.appointment2DoctorName}}   
+                        </p>
+                        <p>
+                            <span class="title">Patient Name :</span> {{appointmentsConflictModel.appointment2PatientName}}   
+                        </p>
+                    </div>
+                    <div class="col-3">
+                        <span class="title">From: </span>{{appointmentsConflictModel.appointment2FromDate | date:'dd/MM/yyyy HH:mm'}} 
+                        <span class="title">To: </span>{{appointmentsConflictModel.appointment2ToDate | date:'dd/MM/yyyy HH:mm'}}
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </td>
+    </tr>
+</table>    

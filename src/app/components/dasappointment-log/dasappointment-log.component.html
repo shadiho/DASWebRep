@@ -1,0 +1,7 @@
+<!--<ul *ngFor="let opLog of appointmentopLogs">
+    <li>{{ opLog.DoctorName }}</li>
+</ul>-->
+<app-dasappointment-op-log-item *ngFor="let opLog1 of appointmentopLogs" [opLog1]="opLog1">
+
+</app-dasappointment-op-log-item>
+<h1 [ngClass]="setErrorClass()">Error while retrieving data from the server</h1>
