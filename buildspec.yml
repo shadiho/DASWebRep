@@ -12,3 +12,9 @@ phases:
     commands:
       - echo Build started...
       - ng build --prod
+  artifacts:
+  files:
+    - '**/*.html'
+    - '**/*.js'
+    - '**/*.css'
+    - '**/*.ico'
